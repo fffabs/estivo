@@ -1,0 +1,22 @@
+# Site settings
+title: "fffabs"
+email: me@fffabs.com
+description: > # this means to ignore newlines until "baseurl:"
+  fffabs &copy 2015 - go create!
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://f-word.co" # the base hostname & protocol for your site
+twitter_username: fffabs
+github_username:  toxinide
+
+# Build settings
+markdown: kramdown
+permalink: ":title/"
+highlighter: pygments
+
+# Pagination
+paginate: 10
+paginate_path: "blog/page/:num/"
+
+# Minification
+sass:
+  style: compressed

@@ -1,0 +1,29 @@
+
+
+<div class="header-container" id="header-container">
+
+<!-- Site navigation -->
+  <nav class="site-nav">
+    <div class="trigger">
+      {% for page in site.pages %}
+        {% if page.title %}
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+      <a class="page-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+      <a class="twitter page-link" href="https://twitter.com/fffabs"><span class="icon-twitter"></span></a>
+      <a class="facebook page-link" href="https://www.facebook.com/fffabs"><span class="icon-facebook"></span></a>
+    </div>
+  </nav>
+
+  <!-- The title of the site -->
+  <header class="site-header">
+    <a href="{{ site.baseurl }}/">
+      <div class="avatar">
+        <img src="/assets/images/avatar.png" />
+      </div>
+    </a>
+    <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
+  </header>
+
+</div>

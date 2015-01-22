@@ -1,0 +1,344 @@
+/**
+ * Site header
+ */
+
+.header-intro {
+    font-size: 18px;
+    color: #aaa;
+}
+.header-intro a, .header-intro a:visited {
+    color: #aaa;
+}
+.header-intro a:hover {
+    color: $brand-color;
+    text-decoration: none;
+}
+
+.header-container {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    background: #3366ff;
+    background-image: -moz-linear-gradient(right top, $from 0%, $to 100%);
+    background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, $from), color-stop(1, $to));
+    background: -webkit-linear-gradient(right top, $from 0%, $to 100%);
+    background: -o-linear-gradient(right top, $from 0%, $to 100%);
+    background: -ms-linear-gradient(right top, $from 0%, $to 100%);
+    background: linear, right top, $from 0%, $to 100%;
+    opacity: 0.95;
+    z-index: 10;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+
+// Header hiding
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin transform($transforms) {
+       -moz-transform: $transforms;
+         -o-transform: $transforms;
+        -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+.headroom {
+    @include transition(transform, 200ms, linear);
+}
+
+.headroom--pinned {
+    display: block;
+    @include transform(translateY(0%));
+}
+.headroom--unpinned {
+    // display: none;
+    @include transform(translateY(100%));
+}
+
+// Avatar
+
+.avatar {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    border-radius: 80%;
+    overflow: hidden;
+    display: block;
+}
+
+.site-header {
+    margin-bottom: 21px;
+    position: relative;
+    // margin: 0 auto;
+    text-align: center;
+    max-width: 1024px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.site-header a.site-title {
+    color: #fff;
+    text-align: center;
+}
+
+.site-title {
+    position: relative;
+    padding: 1em 0;
+    display: block;
+    font-weight: 600;
+    left: 60px;
+
+    &,
+    &:visited, &:hover {
+        text-decoration: none;
+        color: #7923D5;
+    }
+}
+
+a .site-title {
+    color: #5badf0;
+    color: #5694f1;
+}
+
+.page-link {
+    display: inline-block;
+    line-height: 100%;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+nav.site-nav {
+    float: right;
+    height: 100%;
+    margin: 19px 15px;
+
+    .page-link {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    a.page-link {
+        text-decoration: none;
+    }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    // box-shadow: inset 0 1px 0 #DFE1E4;
+    padding: 40px 0 0 0;
+    margin-top: 100px;
+}
+
+.site-footer p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+
+/**
+ * Page content
+ */
+
+.page-heading {
+    font-size: 20px;
+}
+
+#post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+a,
+#post-list a:hover,
+#post-list li:hover .dates {
+    text-decoration: none;
+    color: $brand-color;
+}
+
+#post-list a {
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+/*=========================================
+Post List
+=========================================== */
+#post-list,#archive-list {
+    margin-top: 50px;
+}
+
+#post-list li,#archive-list li {
+    list-style-type: none;
+}
+
+#post-list li:last-child {
+    margin-bottom: 0;
+}
+
+#post-list li+li {
+    padding-top: 20px;
+    border-top: 1px solid #DFE1E4;
+}
+
+#post-list a {
+    color: #333;
+    display: block;
+    font: 600 21px/1.7 $base-font-family;
+}
+
+#post-list h2 {
+    font: normal 19px/1.5em $base-font-family;
+    color: #aaa;
+    max-width: 400px;
+    margin-top: 2px;
+}
+
+#intro-text {
+    padding-top: 10px;
+}
+
+#post-list .dates {
+    float: right;
+    position: relative;
+    top: 1px;
+    font: 300 17px/1.8 $base-font-family;
+    color: #bbb;
+}
+
+#post-list-footer {
+    border-top: 1px solid #DFE1E4;
+    margin-top: 20px;
+    padding-top: 100px;
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 30px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+.related {
+    padding-top: 20px;
+}
+.related li {
+    list-style: none;
+}
+.related li .post-meta {
+    font-size: 15px;
+}
+.related a:link, .related a:hover {
+    text-decoration: none;
+}
+
+// PAGINATION
+.pagination {
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.pagination-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 7px 18px 6px;
+    box-shadow: 0 0 0 1px hsla(5, 84%, 64%, 1);
+}
+
+span.arrow {
+    position: relative;
+    top: 0;
+    font-size: 17px;
+}

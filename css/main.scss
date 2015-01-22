@@ -1,0 +1,124 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Icons */
+@font-face {
+  font-family: 'icons';
+    src: url('/fonts/icons.eot');
+    src: url('/fonts/icons.eot#iefix') format('embedded-opentype'),
+    url('/fonts/icons.woff') format('woff'),
+    url('/fonts/icons.ttf') format('truetype'),
+    url('/fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+}
+.icon-facebook:before { content: '\e802'; }
+.icon-facebook-squared:before { content: '\e800'; }
+.icon-twitter:before { content: '\e801'; }
+.icon-twitter-1:before { content: '\e804'; }
+.icon-facebook-circled:before { content: '\e805'; }
+.icon-twitter-circled:before { content: '\e806'; }
+.icon-facebook-rect:before { content: '\e803'; }
+
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/FaktPro-Thin.eot');
+  src: url('/fonts/FaktPro-Thin.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/FaktPro-Thin.woff') format('woff'),
+       url('/fonts/FaktPro-Thin.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/FaktPro-Blond.eot');
+  src: url('/fonts/FaktPro-Blond.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/FaktPro-Blond.woff') format('woff'),
+       url('/fonts/FaktPro-Blond.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/FaktPro-SemiBold.eot');
+  src: url('/fonts/FaktPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/FaktPro-SemiBold.woff') format('woff'),
+       url('/fonts/FaktPro-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+// Our variables
+$base-font-family: "Fakt", Helvetica, Arial, sans-serif;
+$base-font-size:   21px/1;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.7;
+
+$spacing-unit:     30px;
+
+$text-color:       #000;
+$background-color: #fff;
+$brand-color:      #F26452;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    700px;
+
+$on-palm:          600px;
+$on-laptop:        700px;
+
+// Gradient colours
+// $from:  #AD76F2;
+// $to:    #FD3F4F;
+
+// 3BD8D5
+// FD3F4F
+
+// $from:  #ff2299;
+// $to:    #3366ff;
+
+$from:  #F88E25;
+$to:    #F3286D;
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
