@@ -6,11 +6,11 @@
 /* Icons */
 @font-face {
   font-family: 'icons';
-    src: url('/fonts/icons.eot');
-    src: url('/fonts/icons.eot#iefix') format('embedded-opentype'),
-    url('/fonts/icons.woff') format('woff'),
-    url('/fonts/icons.ttf') format('truetype'),
-    url('/fonts/icons.svg#icons') format('svg');
+    src: url('{{ site.baseurl }}/fonts/icons.eot');
+    src: url('{{ site.baseurl }}/fonts/icons.eot#iefix') format('embedded-opentype'),
+    url('{{ site.baseurl }}/fonts/icons.woff') format('woff'),
+    url('{{ site.baseurl }}/fonts/icons.ttf') format('truetype'),
+    url('{{ site.baseurl }}/fonts/icons.svg#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,30 +38,30 @@
 
 @font-face {
   font-family: 'Fakt';
-  src: url('/fonts/FaktPro-Thin.eot');
-  src: url('/fonts/FaktPro-Thin.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/FaktPro-Thin.woff') format('woff'),
-       url('/fonts/FaktPro-Thin.ttf') format('truetype');
+  src: url('{{ site.baseurl }}/fonts/FaktPro-Thin.eot');
+  src: url('{{ site.baseurl }}/fonts/FaktPro-Thin.eot?#iefix') format('embedded-opentype'),
+       url('{{ site.baseurl }}/fonts/FaktPro-Thin.woff') format('woff'),
+       url('{{ site.baseurl }}/fonts/FaktPro-Thin.ttf') format('truetype');
   font-style: normal;
   font-weight: 100;
 }
 
 @font-face {
   font-family: 'Fakt';
-  src: url('/fonts/FaktPro-Blond.eot');
-  src: url('/fonts/FaktPro-Blond.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/FaktPro-Blond.woff') format('woff'),
-       url('/fonts/FaktPro-Blond.ttf') format('truetype');
+  src: url('{{ site.baseurl }}/fonts/FaktPro-Blond.eot');
+  src: url('{{ site.baseurl }}/fonts/FaktPro-Blond.eot?#iefix') format('embedded-opentype'),
+       url('{{ site.baseurl }}/fonts/FaktPro-Blond.woff') format('woff'),
+       url('{{ site.baseurl }}/fonts/FaktPro-Blond.ttf') format('truetype');
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Fakt';
-  src: url('/fonts/FaktPro-SemiBold.eot');
-  src: url('/fonts/FaktPro-SemiBold.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/FaktPro-SemiBold.woff') format('woff'),
-       url('/fonts/FaktPro-SemiBold.ttf') format('truetype');
+  src: url('{{ site.baseurl }}/fonts/FaktPro-SemiBold.eot');
+  src: url('{{ site.baseurl }}/fonts/FaktPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('{{ site.baseurl }}/fonts/FaktPro-SemiBold.woff') format('woff'),
+       url('{{ site.baseurl }}/fonts/FaktPro-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-weight: 600;
 }
